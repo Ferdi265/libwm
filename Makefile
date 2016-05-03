@@ -1,12 +1,14 @@
 include config.mk
 
 LIB = libwm.a
+TGT = wm.a
 HDR = wm.h
 
 .POSIX:
 .SUFFIXES: .a .o
 
-all: $(LIB)
+all: $(TGT)
+	mv $(TGT) $(LIB)
 
 .o.a:
 	@echo "AR $@"
