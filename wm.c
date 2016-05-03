@@ -329,9 +329,6 @@ wm_resize(xcb_window_t wid, int mode, int w, int h)
 	if (mode == RELATIVE) {
 		w += curw;
 		h += curh;
-	} else {
-		w -= curx;
-		h -= cury;
 	}
 
 	/*
